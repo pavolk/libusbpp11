@@ -1,7 +1,5 @@
 # Introduction
 
-This is thin C++ wrapper for libusb 
-
 This is a thin C++ wrapper for libusb preserving the original libusb API, taking
 advantage of C++ idioms like automatic ressource management with smart-pointers 
 and exceptions.
