@@ -45,7 +45,7 @@ int main(void)
 {
 	try {
 		auto ctx = usb::init();
-		auto devices = usb::get_devices(ctx);
+		auto devices = usb::get_device_list(ctx);
 
 		// ...
 		
