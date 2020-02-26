@@ -57,13 +57,6 @@ int main(void)
 	return 0;
 }
 ```
-
-# Status 
-
-This is by no means complete, but usable for simple libusb applications using the synchronous libusb API.
-
-Pull requests are welcome! 
-
 # Building from source
 
 ## Install the tools
@@ -76,6 +69,7 @@ Pull requests are welcome!
 ```
 $ git clone https://github.com/pavolk/libusbpp11.git
 $ cd libusbpp11
+$ mkdir build && cd build
 ```
 
 ## Install dependencies with conan
@@ -89,6 +83,12 @@ $ conan install --build=missing ..
 ```
 $ cmake --build . --target install
 ```
+
+# Status 
+
+This is by no means complete, but usable for simple libusb applications using the synchronous libusb API.
+
+Pull requests are welcome! 
 
 Enjoy,
 
