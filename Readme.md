@@ -64,7 +64,9 @@ int main(void)
 
 This is by no means complete, but usable for simple libusb applications using the synchronous libusb API.
 
-Pull-requests are welcome! 
+Pull requests are welcome! 
 
-Enjoy.
+Enjoy,
+
+Pavol.
 

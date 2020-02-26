@@ -1,8 +1,6 @@
 
 /// @author: Pavol Kurina, pavol.kurina@gmail.com
-/// @brief Simple C++ wrapper for libusb providing the same API with C++ idioms
-///        like automatic ressource management with smart-pointers and exceptions.
-///        There are no dependencies, besides a compiler supporting C++11.
+/// @brief Thin C++ wrapper for libusb.
 
 #ifndef UTILS_USB_USB_H
 #define UTILS_USB_USB_H

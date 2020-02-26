@@ -1,0 +1,9 @@
+[generators]
+cmake
+
+[requires]
+libusb/1.0.23
+
+[options]
+
+[imports]
