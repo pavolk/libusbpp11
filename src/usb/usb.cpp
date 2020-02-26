@@ -38,7 +38,7 @@ namespace usb
 		libusb_unref_device(dev);
 	}
 
-	std::list<Device> get_devices(Context ctx)
+	std::list<Device> get_device_list(Context ctx)
 	{
 		libusb_device** list;
 		ssize_t size = libusb_get_device_list(ctx.get(), &list);

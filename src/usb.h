@@ -35,7 +35,7 @@ namespace usb
 
 	Context init(int debug_level = 0);
 
-	std::list<Device> get_devices(Context ctx);
+	std::list<Device> get_device_list(Context ctx);
 
 	libusb_device_descriptor get_device_descriptor(Device device);
 
