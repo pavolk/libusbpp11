@@ -1,12 +1,10 @@
 # Introduction
 
-This is a thin C++ wrapper for libusb preserving the original libusb API, taking
-advantage of C++ idioms like automatic ressource management with smart-pointers 
-and exceptions.
+This is a thin C++ wrapper for [libusb](https://github.com/libusb/libusb.git). Unlike other such wrappers it tries to preserve the original libusb API, but taking advantage of C++ idioms like automatic ressource management with smart-pointers and exceptions.
 
-There are no dependencies, besides a compiler supporting C++11.
+There are no dependencies, besides the libusb and a compiler supporting C++11.
 
-Knowing the libusb API, it should feel familiar, but save a lot of the boilerplate code as shown in following example code:
+Knowing the libusb API, using libusbpp11 should feel familiar, but save a lot of the boilerplate code as shown in following example code:
 
 ## Libusb example:
 
@@ -66,7 +64,32 @@ This is by no means complete, but usable for simple libusb applications using th
 
 Pull requests are welcome! 
 
+# Building from source
+
+## Install the tools
+
+* [CMake](https://cmake.org/download/) 
+* [conan](https://conan.io/downloads.html)
+
+## Get the sources
+
+```
+$ git clone https://github.com/pavolk/libusbpp11.git
+$ cd libusbpp11
+```
+
+## Install dependencies with conan
+
+```
+$ conan install --build=missing ..
+```
+
+## Build and install
+
+```
+$ cmake --build . --target install
+```
+
 Enjoy,
 
 Pavol.
-
