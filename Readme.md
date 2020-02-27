@@ -1,10 +1,8 @@
 # Introduction
 
-This is a thin C++ wrapper for [libusb](https://github.com/libusb/libusb.git). Unlike other such wrappers it tries to preserve the original libusb API, but taking advantage of C++ idioms like automatic ressource management with smart-pointers and exceptions.
+This is a thin C++ wrapper for [libusb](https://github.com/libusb/libusb.git). Unlike some other C++ wrappers (e.g. [Libusbpp](https://github.com/zarthcode/Libusbpp)), which are at this moment more complete, this wrapper tries to preserve the original libusb API as much as possible, but taking advantage of C++ idioms like automatic ressource management with smart-pointers and exceptions.
 
-There are no dependencies, besides the libusb and a compiler supporting C++11.
-
-Knowing the libusb API, using libusbpp11 should feel familiar, but save a lot of the boilerplate code as shown in following example code:
+Knowing the libusb API, using this library should feel familiar, but save most of the boilerplate code as shown in following example code:
 
 ## Libusb example:
 
@@ -59,10 +57,9 @@ int main(void)
 ```
 # Building from source
 
-## Install the tools
+There are no dependencies, besides the libusb and a compiler supporting C++11. 
 
-* [CMake](https://cmake.org/download/) 
-* [conan](https://conan.io/downloads.html)
+The dependencies are managed by the C++ package manager [conan](https://conan.io/downloads.html). The easiest way at the moment is to build the library from source by [CMake](https://cmake.org/download/) .
 
 ## Get the sources
 
@@ -75,13 +72,13 @@ $ mkdir build && cd build
 ## Install dependencies with conan
 
 ```
-$ conan install --build=missing ..
+build$ conan install --build=missing ..
 ```
 
 ## Build and install
 
 ```
-$ cmake --build . --target install
+build$ cmake --build . --target install
 ```
 
 # Status 
