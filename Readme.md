@@ -87,8 +87,16 @@ build$ cmake --build . --target install
 
 This is by no means complete, but usable for simple libusb applications using the synchronous libusb API.
 
+# Documentation
+
+There is not much of additional documentation at this moment, but most of the functions are just thin wrappers around the function with the same name of the libusb, which is extensively documented [here](http://libusb.sourceforge.net/api-1.0/). A brief look at the [code](src/usb/usb.cpp) will probably answer most of the remaining questions.
+
+More documentation will follow.
+
+
 Pull requests are welcome! 
 
 Enjoy,
 
 Pavol.
+
