@@ -12,4 +12,4 @@ add_subdirectory(doc)
 add_subdirectory(src)
 
 install(EXPORT libusbpp11 DESTINATION cmake)
-install(FILES Readme.md ChangeLog.md LICENSE DESTINATION .)
+install(FILES Readme.md ChangeLog.md LICENSE DESTINATION share/doc/${PROJECT_NAME}-${PROJECT_VERSION})
