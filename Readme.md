@@ -37,6 +37,7 @@ int main(void)
 ## Libusbpp11 example:
 
 ```
+#include <iostream>
 #include <usb.h>
 
 int main(void)
@@ -55,6 +56,7 @@ int main(void)
 	return 0;
 }
 ```
+
 # Building from source
 
 There are no dependencies, besides the libusb and a compiler supporting C++11. 
