@@ -158,9 +158,7 @@ namespace usb
 		return mps_or_err;
 	}
 
-	
-
-	void free_config_descriptor(libusb_config_descriptor* desc)
+	static void free_config_descriptor(libusb_config_descriptor* desc)
 	{
 		libusb_free_config_descriptor(desc);
 	}

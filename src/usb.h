@@ -11,9 +11,6 @@
 
 #if defined(WIN32)
 #pragma warning(disable: 4200)
-#pragma warning(disable: 4510)
-#pragma warning(disable: 4512)
-#pragma warning(disable: 4610)
 #endif
 #include <libusb-1.0/libusb.h>
 
