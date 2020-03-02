@@ -2,7 +2,7 @@
 /// @author Pavol Kurina, pavol.kurina@gmail.com
 
 #include <iostream>
-#include <usb.h>
+#include <libusbpp11/usb.h>
 
 int main(void)
 {

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <sstream>
-#include "usb.h"
+#include "libusbpp11/usb.h"
 
 #define __func__ __FUNCTION__
 
