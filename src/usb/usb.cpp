@@ -29,7 +29,7 @@ namespace usb
 		if (err < 0) {
 			throw system_error(error_message("libusb_init", err), static_cast<libusb_error>(err));
 		}
-		libusb_set_debug(ctx, debug_level);
+		libusb_set_option(ctx, LIBUSB_OPTION_LOG_LEVEL, debug_level);
 		return Context(ctx, exit);
 	}
 
