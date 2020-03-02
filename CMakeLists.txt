@@ -24,5 +24,9 @@ add_subdirectory(examples)
 add_subdirectory(doc)
 add_subdirectory(src)
 
-install(EXPORT libusbpp11 DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
+install(EXPORT libusbpp11 
+		DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake
+		FILE libusbpp11.cmake
+		NAMESPACE LIBUSBPP11_PKG::)
+
 install(FILES Readme.md ChangeLog.md LICENSE DESTINATION ${CMAKE_INSTALL_DOCDIR})
