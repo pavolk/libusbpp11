@@ -33,5 +33,3 @@ install(EXPORT libusbpp11
 		FILE libusbpp11.cmake)
 
 install(FILES Readme.md ChangeLog.md LICENSE DESTINATION ${CMAKE_INSTALL_DOCDIR})
-
-install(EXPORT libusbpp11 DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
