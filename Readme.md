@@ -89,7 +89,7 @@ This is by no means complete, but usable for simple libusb applications using th
 
 # Documentation
 
-There is not much of additional documentation at this moment, but most of the functions are just thin wrappers around the function with the same name of the libusb, which is extensively documented [here](http://libusb.sourceforge.net/api-1.0/). A brief look at the [code](src/usb/usb.cpp) will probably answer most of the remaining questions.
+There is not much of additional documentation at this moment, but most of the functions are just thin wrappers around the function with the same name of the libusb, which is extensively documented [here](http://libusb.sourceforge.net/api-1.0/). A brief look at the [code](src/usb.cpp) will probably answer most of the remaining questions.
 
 More documentation will follow.
 
