@@ -143,6 +143,16 @@ namespace usb
 		std::get_deleter<HandleDeleter>(handle)->release_interface_before_close(interface_number);
 	}
 
+	std::string get_string(Handle handle, unsigned index)
+	{
+		unsigned char buffer[100];
+		int err = libusb_get_string_descriptor_ascii(handle.get(), index, buffer, sizeof(buffer));
+		if (err < 0) {
+			throw system_error(error_message("libusb_get_device_descriptor", err), static_cast<libusb_error>(err));
+		}
+		return std::string((char*)buffer, err);
+	}
+
 	unsigned get_max_packet_size(Handle handle, unsigned char endpoint_address)
 	{
 		auto device = libusb_get_device(handle.get());

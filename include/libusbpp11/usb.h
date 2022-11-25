@@ -34,17 +34,21 @@ namespace usb
 
 	std::list<Device> get_device_list(Context ctx);
 
+	unsigned get_device_address(Device device);
+
 	libusb_device_descriptor get_device_descriptor(Device device);
 
+	ConfigurationDescriptor get_configuration_descriptor(Device dev, unsigned value = 1);
+
 	uint16_t vendor_id(Device device);
+
 	uint16_t product_id(Device device);
-	unsigned get_device_address(Device device);
 
 	Handle open(Device dev);
 
-	void claim_interface(Handle device_handle, unsigned interface_number);
+	std::string get_string(Handle device_handle, unsigned index);
 
-	ConfigurationDescriptor get_configuration_descriptor(Device dev, unsigned value = 1);
+	void claim_interface(Handle device_handle, unsigned interface_number);
 
 	unsigned get_max_packet_size(Device dev, unsigned char endpoint_address);
 
