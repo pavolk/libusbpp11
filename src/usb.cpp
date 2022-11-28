@@ -105,7 +105,7 @@ namespace usb
 			int err = libusb_release_interface(handle, _ifno);
 			if (err < 0) {
 				std::cerr << "libusb_release_interface(" << handle << ", "
-					<< std::dec << _ifno << ") failed." << std::endl;
+					<< std::dec << _ifno << ") failed with " << err << "." << std::endl;
 			}
 		}
 
