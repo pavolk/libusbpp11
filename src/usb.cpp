@@ -146,7 +146,7 @@ namespace usb
 	std::string get_string(Handle handle, unsigned index)
 	{
 		unsigned char buffer[100];
-		int err = libusb_get_string_descriptor_ascii(handle.get(), index, buffer, sizeof(buffer));
+		int err = libusb_get_string_descriptor_ascii(handle.get(), static_cast<uint8_t>(index), buffer, sizeof(buffer));
 		if (err < 0) {
 			throw system_error(error_message("libusb_get_string_descriptor_ascii", err), static_cast<libusb_error>(err));
 		}
