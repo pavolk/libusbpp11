@@ -9,7 +9,14 @@ target_include_directories(usbpp11
        	${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-target_link_libraries(usbpp11 PUBLIC CONAN_PKG::libusb)
+if (WIN32)
+	target_link_libraries(usbpp11 PUBLIC CONAN_PKG::libusb)
+else ()
+	target_include_directories(usbpp11 PRIVATE ${libusb_INCLUDE_DIRS})
+	target_link_libraries(usbpp11 ${libusb_LIBRARIES})
+endif ()
+
+
 
 install(TARGETS usbpp11
 		EXPORT libusbpp11

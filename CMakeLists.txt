@@ -6,10 +6,15 @@ set (CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_DEBUG_POSTFIX "d" CACHE STRING "Set debug library postfix" FORCE)
 
-# if included from a parent project, this will fail...
-if (NOT CONAN_DEPENDENCIES)
-	include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-	conan_basic_setup(TARGETS)
+if (WIN32)
+	# if included from a parent project, this will fail...
+	if (NOT CONAN_DEPENDENCIES)
+		include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+		conan_basic_setup(TARGETS)
+	endif ()
+else ()
+	find_package(PkgConfig REQUIRED)
+	pkg_check_modules(libusb REQUIRED libusb-1.0)
 endif ()
 
 set(CMAKE_INSTALL_BINDIR bin)
