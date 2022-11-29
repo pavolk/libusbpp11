@@ -29,7 +29,11 @@ namespace usb
 		if (err < 0) {
 			throw system_error(error_message("libusb_init", err), static_cast<libusb_error>(err));
 		}
+#if defined(LIBUSB_API_VERSION) && LIBUSB_API_VERSION >= 0x01000106
 		libusb_set_option(ctx, LIBUSB_OPTION_LOG_LEVEL, debug_level);
+#else
+		libusb_set_debug(ctx, debug_level);
+#endif
 		return Context(ctx, exit);
 	}
 
