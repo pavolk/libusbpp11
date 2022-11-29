@@ -20,6 +20,7 @@ namespace usb
 	typedef std::shared_ptr<libusb_context> Context;
 	typedef std::shared_ptr<libusb_device> Device;
 	typedef std::shared_ptr<libusb_device_handle> Handle;
+	typedef std::weak_ptr<libusb_device_handle> HandleRef;
 	typedef std::shared_ptr<libusb_config_descriptor> ConfigurationDescriptor;
 
 	class system_error : public std::system_error {
