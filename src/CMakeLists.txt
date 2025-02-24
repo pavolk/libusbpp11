@@ -10,7 +10,7 @@ target_include_directories(usbpp11
 )
 
 if (WIN32)
-	target_link_libraries(usbpp11 PUBLIC CONAN_PKG::libusb)
+	target_link_libraries(usbpp11 PUBLIC libusb::libusb)
 else ()
 	target_include_directories(usbpp11 PRIVATE ${libusb_INCLUDE_DIRS})
 	target_link_libraries(usbpp11 ${libusb_LIBRARIES})
